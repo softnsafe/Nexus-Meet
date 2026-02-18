@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Video, Mic, MicOff, VideoOff, ArrowRight, Keyboard, User, Plus, Users, Copy, Check } from 'lucide-react';
+import { Video, Mic, MicOff, VideoOff, ArrowRight, Keyboard, User, Plus, Users } from 'lucide-react';
 
 interface LobbyProps {
   onJoin: (code: string, userName: string) => void;
@@ -17,7 +17,6 @@ const Lobby: React.FC<LobbyProps> = ({ onJoin, initialCode }) => {
   const [userName, setUserName] = useState("");
   const [meetingCode, setMeetingCode] = useState("");
   const [mode, setMode] = useState<'new' | 'join'>(initialCode ? 'join' : 'new');
-  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     if (initialCode) {
@@ -97,14 +96,6 @@ const Lobby: React.FC<LobbyProps> = ({ onJoin, initialCode }) => {
     if (stream) stream.getTracks().forEach(t => t.stop());
     onJoin(finalCode, userName);
   };
-
-  const copyLink = () => {
-      const code = meetingCode || "new-meeting";
-      const link = `${window.location.origin}?meetingCode=${code}`;
-      navigator.clipboard.writeText(link);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-  }
 
   return (
     <div className="min-h-screen bg-gray-950 flex flex-col items-center justify-center p-4">

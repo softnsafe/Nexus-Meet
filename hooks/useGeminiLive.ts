@@ -211,7 +211,7 @@ export const useGeminiLive = ({ onTranscript, videoRef }: UseGeminiLiveProps) =>
             }
 
             // Handle Audio Output
-            const base64Audio = message.serverContent?.modelTurn?.parts[0]?.inlineData?.data;
+            const base64Audio = message.serverContent?.modelTurn?.parts?.[0]?.inlineData?.data;
             if (base64Audio && outputAudioContextRef.current) {
               const ctx = outputAudioContextRef.current;
               const audioBuffer = await decodeAudioData(

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Message } from '../types';
-import { MessageSquare, User, Bot, Send, Download, FileSpreadsheet } from 'lucide-react';
+import { MessageSquare, User, Bot, Send, FileSpreadsheet } from 'lucide-react';
 
 interface ChatSidebarProps {
   messages: Message[];

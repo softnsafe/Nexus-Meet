@@ -4,7 +4,7 @@ import ControlBar from './ControlBar';
 import ChatSidebar from './ChatSidebar';
 import ParticipantList from './ParticipantList';
 import { Message, Participant } from '../types';
-import { Sparkles, LayoutGrid, UserPlus, X, Copy, Check, Users, MonitorUp, User, MicOff, Info, Zap } from 'lucide-react';
+import { Sparkles, LayoutGrid, UserPlus, X, Copy, Check, Users, MonitorUp, MicOff, Info } from 'lucide-react';
 import Visualizer from './Visualizer';
 import { GoogleGenAI, Chat } from '@google/genai';
 
