@@ -1,0 +1,8 @@
+{
+  "name": "Nexus Meet",
+  "description": "A next-generation AI meeting experience powered by Gemini Live API. Collaborate, interview, or chat with a multimodal AI agent in a real-time video conference environment.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
